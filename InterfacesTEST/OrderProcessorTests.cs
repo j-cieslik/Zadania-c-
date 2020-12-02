@@ -1,5 +1,6 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Interfaces;
 
 namespace InterfacesTEST
 {
@@ -15,10 +16,10 @@ namespace InterfacesTEST
             var orderProcessor = new OrderProcessor(new FakeShippingCalculator());
             var order = new Order()
             {
-                Shipment = new Shipment();
+                Shipment = new Shipment()
             };
 
-            OrderProcessorTests.Process(order);
+            orderProcessor.Process(order);
         }
 
         [TestMethod]
@@ -41,5 +42,6 @@ namespace InterfacesTEST
         public float CalculateShipping(Order order)
         {
             return 1;
+        }
     }
 }
