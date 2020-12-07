@@ -3,12 +3,8 @@ using System.Threading;
 
 namespace Events
 {
-    public class VideoEventArgs : EventArgs
-    {
-        public Video Video { get; set; }
-    }
 
-  public class VideoEncoder
+    public class VideoEncoder
   {
 
     // 1 - Define a delegate
