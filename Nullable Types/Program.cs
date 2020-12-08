@@ -33,6 +33,13 @@ namespace Nullable_Types
             DateTime date3 = date ?? DateTime.Today; //the same what above
 
             DateTime date4 = (date != null) ? date.GetValueOrDefault() : DateTime.Today;
+
+
+            DateTime? date18 = null;
+
+            System.Console.WriteLine(date18.Value); //exception
+            System.Console.WriteLine(date18.GetValueOrDefault()); // no exception
+
         }
     }
 }
